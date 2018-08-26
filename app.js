@@ -1,5 +1,8 @@
 //Checks to see that the HTML has loaded before javascript is run
 $(document).ready(function (){
+    //Creating a div element and appending it to the body
+   $("body").append("<div></div>");
+
     //Button is diabled unless the user types input into the field 
     $("#text").keyup(function (){
         if ($(this).val() == ''){
@@ -14,6 +17,10 @@ $(document).ready(function (){
         alert("The button has been clicked");
         let txt = $("#text").val();
         alert(txt);
+        $("div").append("<h2>" + $("#text").val() + "</h2>");
     })
+
+   
+
 });
 
